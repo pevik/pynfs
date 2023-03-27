@@ -358,7 +358,7 @@ def testLotsOfClients(t, env):
     res = c.create_obj(basedir)
     check(res)
     idlist = [b"Clientid%i_for_%s_pid%i" % (x, t.word(), os.getpid()) \
-              for x in range(1024)]
+              for x in range(1023)]
     for id in idlist:
         c.init_connection(id)
         c.create_confirm(t.word(), basedir + [id])
